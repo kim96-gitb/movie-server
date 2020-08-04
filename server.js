@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config({ path: "./config/config.env" });
 
 const movie = require("./routes/movie");
 const users = require("./routes/users");
@@ -7,7 +8,7 @@ const bookmark = require("./routes/bookmark");
 const reply = require("./routes/reply");
 const path = require("path");
 const reservation = require("./routes/reservation");
-dotenv.config({ path: "./config/config.env" });
+
 // 파일처리를 위한 라이브러리 임포트
 const fileupload = require("express-fileupload");
 //제이슨 연결

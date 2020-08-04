@@ -11,6 +11,7 @@ const reservation = require("./routes/reservation");
 
 // 파일처리를 위한 라이브러리 임포트
 const fileupload = require("express-fileupload");
+const { nextTick } = require("process");
 //제이슨 연결
 const app = express();
 
@@ -24,6 +25,9 @@ app.use("/api/v1/users", users);
 app.use("/api/v1/bookmark", bookmark);
 app.use("/api/v1/reply", reply);
 app.use("/api/v1/reservation", reservation);
+app.get("/", (req, res, next) => {
+  res.json({ success: true });
+});
 
 const PORT = process.env.PORT || 5600;
 

@@ -10,7 +10,7 @@ const path = require("path");
 const reservation = require("./routes/reservation");
 // 파일처리를 위한 라이브러리 임포트
 const fileupload = require("express-fileupload");
-
+//제이슨 연결
 const app = express();
 
 app.use(express.json());
